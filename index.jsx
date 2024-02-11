@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
-import { MainView } from "./components/main-view/main-view";
+import { MainView } from "components\main-view\main-view.jsx";
+import { MovieView } from "components\movie-view\movie-view.jsx";
 
 import "./index.scss";
 
