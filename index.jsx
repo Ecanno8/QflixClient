@@ -1,8 +1,7 @@
-import { useState } from "react";
-import { MovieCard } from "../movie-card";
-import { MovieView } from "../movie-view";
+import { createRoot } from "react-dom/client";
+import { MainView } from "./components/main-view";
 
-import "index.scss";
+import "./index.scss";
 
 const App = () => {
     return <MainView />;
