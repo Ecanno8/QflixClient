@@ -1,6 +1,6 @@
-import { createRoot } from "react-dom/client";
-import { MainView } from "components\main-view\main-view.jsx";
-import { MovieView } from "components\movie-view\movie-view.jsx";
+import { useState } from "react";
+import { MovieCard } from "../movie-card";
+import { MovieView } from "../movie-view";
 
 import "index.scss";
 
