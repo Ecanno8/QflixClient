@@ -5,6 +5,8 @@ import { LoginView } from "../login-view/login-view";
 
 export const MainView = () => {
     const [movies, setMovies] = useState([]);
+    const [selectedMovie, setselectedMovie] = useState(null);
+    const [user, setUser] = useState(null);
 
 
     useEffect(() => {
@@ -31,8 +33,11 @@ export const MainView = () => {
             });
     }, []);
 
-    const [selectedMovie, setSelectedMovie] = useState(null);
-
+    // Require Login
+    if (!user) {
+        return <LoginView onLoggedIn={(user) => setUser(user)} />;
+    }
+    //Show Similar Movies
     if (selectedMovie) {
         let similarMovies = movies.filter((movie) => {
             return movie._id !== selectedMovie._id && movie.Genre.Name === selectedMovie.Genre.Name;
