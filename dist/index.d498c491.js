@@ -27181,7 +27181,7 @@ const MainView = ()=>{
     (0, _react.useEffect)(()=>{
         fetch("https://movieflix-bf9931a77954.herokuapp.com/movies").then((response)=>response.json()).then((data)=>{
             console.log(data);
-            const QflixApi = data.map((movie)=>{
+            const moviesfromApi = data.map((movie)=>{
                 return {
                     _id: movie._id,
                     Title: movie.Title,
@@ -27196,7 +27196,7 @@ const MainView = ()=>{
                     }
                 };
             });
-            setMovies(QflixApi);
+            setMovies(moviesfromApi);
         });
     }, []);
     const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
