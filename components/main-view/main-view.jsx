@@ -10,7 +10,7 @@ export const MainView = () => {
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
-                const QflixApi = data.map((movie) => {
+                const moviesfromApi = data.map((movie) => {
                     return {
                         _id: movie._id,
                         Title: movie.Title,
@@ -25,7 +25,7 @@ export const MainView = () => {
                         }
                     };
                 });
-                setMovies(QflixApi);
+                setMovies(moviesfromApi);
             });
     }, []);
 
