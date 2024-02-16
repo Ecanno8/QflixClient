@@ -28512,8 +28512,8 @@ const LoginView = ({ onLoggedIn })=>{
         // this prevents the default behavior of the form which is to reload the entire page
         event.preventDefault();
         const data = {
-            access: username,
-            secret: password
+            Username: username,
+            Password: password
         };
         fetch("https://movieflix-bf9931a77954.herokuapp.com/login", {
             method: "POST",
@@ -28627,7 +28627,7 @@ const SignupView = ()=>{
             Email: email,
             Birthday: birthday
         };
-        fetch("https://my-movies-api-23e4e5dc7a5e.herokuapp.com/users", {
+        fetch("https://movieflix-bf9931a77954.herokuapp.com/users", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
