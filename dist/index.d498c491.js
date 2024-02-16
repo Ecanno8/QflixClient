@@ -28517,7 +28517,7 @@ const LoginView = ({ onLoggedIn })=>{
         };
         fetch("https://movieflix-bf9931a77954.herokuapp.com/login", {
             method: "POST",
-            header: {
+            headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(data)
