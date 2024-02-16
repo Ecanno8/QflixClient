@@ -27184,10 +27184,10 @@ const MainView = ()=>{
     const [user, setUser] = (0, _react.useState)(storedUser ? storedUser : null);
     const [token, setToken] = (0, _react.useState)(storedToken ? storedToken : null);
     const [movies, setMovies] = (0, _react.useState)([]);
-    const [selectedMovie, setselectedMovie] = (0, _react.useState)(null);
+    const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
     (0, _react.useEffect)(()=>{
         if (!token) return;
-        fetch("https://my-movies-api-23e4e5dc7a5e.herokuapp.com/movies", {
+        fetch("https://movieflix-bf9931a77954.herokuapp.com/movies", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -27243,7 +27243,7 @@ const MainView = ()=>{
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieView.MovieView), {
                     movie: selectedMovie,
-                    onBackClick: ()=>setselectedMovie(null)
+                    onBackClick: ()=>setSelectedMovie(null)
                 }, void 0, false, {
                     fileName: "components/main-view/main-view.jsx",
                     lineNumber: 69,
@@ -27274,7 +27274,7 @@ const MainView = ()=>{
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieView.MovieView), {
                     movie: selectedMovie,
-                    onBackClick: ()=>setselectedMovie(null)
+                    onBackClick: ()=>setSelectedMovie(null)
                 }, void 0, false, {
                     fileName: "components/main-view/main-view.jsx",
                     lineNumber: 77,
@@ -27295,7 +27295,7 @@ const MainView = ()=>{
                 similarMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
                         movie: movie,
                         onMovieClick: (newSelectedMovie)=>{
-                            setselectedMovie(newSelectedMovie);
+                            setSelectedMovie(newSelectedMovie);
                         }
                     }, movie._id, false, {
                         fileName: "components/main-view/main-view.jsx",
@@ -27363,7 +27363,7 @@ const MainView = ()=>{
         columnNumber: 9
     }, undefined);
 };
-_s(MainView, "4bIld1c64k3iGMaG3fO+PtTsOic=");
+_s(MainView, "9wJBvfUyU2IigbyWC+M5y3EH9h4=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");

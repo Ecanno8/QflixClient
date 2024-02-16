@@ -10,7 +10,7 @@ export const MainView = () => {
     const [user, setUser] = useState(storedUser ? storedUser : null);
     const [token, setToken] = useState(storedToken ? storedToken : null);
     const [movies, setMovies] = useState([]);
-    const [selectedMovie, setselectedMovie] = useState(null);
+    const [selectedMovie, setSelectedMovie] = useState(null);
 
 
     useEffect(() => {
@@ -18,7 +18,7 @@ export const MainView = () => {
             return;
         }
 
-        fetch("https://my-movies-api-23e4e5dc7a5e.herokuapp.com/movies", {
+        fetch("https://movieflix-bf9931a77954.herokuapp.com/movies", {
             headers: { Authorization: `Bearer ${token}` }
         })
             .then((response) => response.json())
@@ -66,7 +66,7 @@ export const MainView = () => {
         if (similarMovies.length === 0) {
             return (
                 <>
-                    <MovieView movie={selectedMovie} onBackClick={() => setselectedMovie(null)} /><br />
+                    <MovieView movie={selectedMovie} onBackClick={() => setSelectedMovie(null)} /><br />
                     <h2>Similar Movies</h2>
                     <p>There are no similar movies.</p>
                 </>
@@ -74,14 +74,14 @@ export const MainView = () => {
         } else {
             return (
                 <>
-                    <MovieView movie={selectedMovie} onBackClick={() => setselectedMovie(null)} /><br />
+                    <MovieView movie={selectedMovie} onBackClick={() => setSelectedMovie(null)} /><br />
                     <h2>Similar Movies</h2>
                     {similarMovies.map((movie) => (
                         <MovieCard
                             key={movie._id}
                             movie={movie}
                             onMovieClick={(newSelectedMovie) => {
-                                setselectedMovie(newSelectedMovie);
+                                setSelectedMovie(newSelectedMovie);
                             }}
                         />
                     ))}
