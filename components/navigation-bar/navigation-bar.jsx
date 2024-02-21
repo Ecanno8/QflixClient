@@ -1,8 +1,3 @@
-
-Certainly! I've added a "Home" link to the navigation bar for both logged-in and logged-out users:
-
-javascript
-Copy code
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
