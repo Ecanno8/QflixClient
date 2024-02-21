@@ -6,9 +6,15 @@ import { Col, Row } from "react-bootstrap";
 export const MovieView = ({ movies }) => {
     const { movieId } = useParams();
 
+    // Find the movie by ID
     const movie = movies.find((movie) => movie._id === movieId);
 
+    // Check if movie is defined before accessing its properties
+    if (!movie) {
+        return <div>Loading...</div>; // or handle the case when movie is not found
+    }
 
+    // Render the movie details
     return (
         <Row className="mt-5 justify-content-center">
             <Col md={5} >

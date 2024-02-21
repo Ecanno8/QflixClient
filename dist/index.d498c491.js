@@ -41219,7 +41219,17 @@ var _s = $RefreshSig$();
 const MovieView = ({ movies })=>{
     _s();
     const { movieId } = (0, _reactRouter.useParams)();
+    // Find the movie by ID
     const movie = movies.find((movie)=>movie._id === movieId);
+    // Check if movie is defined before accessing its properties
+    if (!movie) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "Loading..."
+    }, void 0, false, {
+        fileName: "components/movie-view/movie-view.jsx",
+        lineNumber: 14,
+        columnNumber: 16
+    }, undefined); // or handle the case when movie is not found
+    // Render the movie details
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
         className: "mt-5 justify-content-center",
         children: [
@@ -41231,12 +41241,12 @@ const MovieView = ({ movies })=>{
                     className: "img-fluid"
                 }, void 0, false, {
                     fileName: "components/movie-view/movie-view.jsx",
-                    lineNumber: 15,
+                    lineNumber: 21,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "components/movie-view/movie-view.jsx",
-                lineNumber: 14,
+                lineNumber: 20,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -41250,20 +41260,20 @@ const MovieView = ({ movies })=>{
                                 children: "Title: "
                             }, void 0, false, {
                                 fileName: "components/movie-view/movie-view.jsx",
-                                lineNumber: 19,
+                                lineNumber: 25,
                                 columnNumber: 21
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: movie.Title
                             }, void 0, false, {
                                 fileName: "components/movie-view/movie-view.jsx",
-                                lineNumber: 20,
+                                lineNumber: 26,
                                 columnNumber: 21
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "components/movie-view/movie-view.jsx",
-                        lineNumber: 18,
+                        lineNumber: 24,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41274,20 +41284,20 @@ const MovieView = ({ movies })=>{
                                 children: "Description: "
                             }, void 0, false, {
                                 fileName: "components/movie-view/movie-view.jsx",
-                                lineNumber: 23,
+                                lineNumber: 29,
                                 columnNumber: 21
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: movie.Description
                             }, void 0, false, {
                                 fileName: "components/movie-view/movie-view.jsx",
-                                lineNumber: 24,
+                                lineNumber: 30,
                                 columnNumber: 21
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "components/movie-view/movie-view.jsx",
-                        lineNumber: 22,
+                        lineNumber: 28,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41298,20 +41308,20 @@ const MovieView = ({ movies })=>{
                                 children: "Director:"
                             }, void 0, false, {
                                 fileName: "components/movie-view/movie-view.jsx",
-                                lineNumber: 27,
+                                lineNumber: 33,
                                 columnNumber: 21
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: movie.Director.Name
                             }, void 0, false, {
                                 fileName: "components/movie-view/movie-view.jsx",
-                                lineNumber: 28,
+                                lineNumber: 34,
                                 columnNumber: 21
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "components/movie-view/movie-view.jsx",
-                        lineNumber: 26,
+                        lineNumber: 32,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41322,20 +41332,20 @@ const MovieView = ({ movies })=>{
                                 children: "Genre: "
                             }, void 0, false, {
                                 fileName: "components/movie-view/movie-view.jsx",
-                                lineNumber: 31,
+                                lineNumber: 37,
                                 columnNumber: 21
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: movie.Genre.Name
                             }, void 0, false, {
                                 fileName: "components/movie-view/movie-view.jsx",
-                                lineNumber: 32,
+                                lineNumber: 38,
                                 columnNumber: 21
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "components/movie-view/movie-view.jsx",
-                        lineNumber: 30,
+                        lineNumber: 36,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41346,20 +41356,20 @@ const MovieView = ({ movies })=>{
                                 children: "Year:  "
                             }, void 0, false, {
                                 fileName: "components/movie-view/movie-view.jsx",
-                                lineNumber: 35,
+                                lineNumber: 41,
                                 columnNumber: 21
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: movie.Year
                             }, void 0, false, {
                                 fileName: "components/movie-view/movie-view.jsx",
-                                lineNumber: 36,
+                                lineNumber: 42,
                                 columnNumber: 21
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "components/movie-view/movie-view.jsx",
-                        lineNumber: 34,
+                        lineNumber: 40,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -41368,24 +41378,24 @@ const MovieView = ({ movies })=>{
                             children: "Back"
                         }, void 0, false, {
                             fileName: "components/movie-view/movie-view.jsx",
-                            lineNumber: 39,
+                            lineNumber: 45,
                             columnNumber: 21
                         }, undefined)
                     }, void 0, false, {
                         fileName: "components/movie-view/movie-view.jsx",
-                        lineNumber: 38,
+                        lineNumber: 44,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "components/movie-view/movie-view.jsx",
-                lineNumber: 17,
+                lineNumber: 23,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "components/movie-view/movie-view.jsx",
-        lineNumber: 13,
+        lineNumber: 19,
         columnNumber: 9
     }, undefined);
 };
