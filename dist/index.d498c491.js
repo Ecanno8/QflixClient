@@ -27442,7 +27442,7 @@ $RefreshReg$(_c, "MainView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"8z54c","../movie-view/movie-view":"lNY7v","../login-view/login-view":"82yVY","../signup-view/signup-view.jsx":"jDmiJ","../navigation-bar/navigation-bar.jsx":"bpgC4","react-bootstrap/Col":"2L2I6","react-bootstrap/Row":"cMC39","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"iw2VD","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9x3Pd","../profile-view/profile-view.jsx":"loco3"}],"8z54c":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"8z54c","../movie-view/movie-view":"lNY7v","../login-view/login-view":"82yVY","../signup-view/signup-view.jsx":"jDmiJ","@parcel/transformer-js/src/esmodule-helpers.js":"iw2VD","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9x3Pd","../navigation-bar/navigation-bar.jsx":"bpgC4","../profile-view/profile-view.jsx":"loco3","react-bootstrap/Col":"2L2I6","react-bootstrap/Row":"cMC39","react-router-dom":"9xmpe"}],"8z54c":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$42ca = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42153,7 +42153,7 @@ $RefreshReg$(_c, "ProfileView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"iw2VD","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9x3Pd","./favorite-movie":"2Xw1y"}],"2Xw1y":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap":"3AD9A","./favorite-movie":"2Xw1y","@parcel/transformer-js/src/esmodule-helpers.js":"iw2VD","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9x3Pd"}],"2Xw1y":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3c25 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
