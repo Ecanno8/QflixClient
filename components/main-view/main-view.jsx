@@ -5,8 +5,8 @@ import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view.jsx";
 import { NavigationBar } from "../navigation-bar/navigation-bar.jsx";
 import { ProfileView } from "../profile-view/profile-view.jsx"; // Import ProfileView component
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { Col, Form, Button } from "react-bootstrap/Col";
+import { Row } from "react-bootstrap/Row";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 export const MainView = () => {
@@ -15,6 +15,7 @@ export const MainView = () => {
     const [user, setUser] = useState(storedUser ? storedUser : null);
     const [token, setToken] = useState(storedToken ? storedToken : null);
     const [movies, setMovies] = useState([]);
+    const [search, setSearch] = useState("");
     const [selectedMovie, setSelectedMovie] = useState(null);
 
     useEffect(() => {
@@ -137,11 +138,29 @@ export const MainView = () => {
                                     <Col>The list is empty</Col>
                                 ) : (
                                     <>
-                                        {movies.map((movie) => (
-                                            <Col md={6} lg={4} xl={3} className="mb-5 col-8" key={movie._id}>
-                                                <MovieCard movie={movie} />
-                                            </Col>
-                                        ))}
+                                        <Form className="form-inline mt-5 d-flex justify-content-center">
+                                            <Form.Control
+                                                className="mx-5 mx-md-0"
+                                                type="search"
+                                                id="searchForm"
+                                                onChange={(e) => setSearch(e.target.value)}
+                                                placeholder="Search for ..."
+                                                aria-label="Search"
+                                            />
+                                        </Form>
+                                        {movies.filter((movie) => {
+                                            return search.toLowerCase() === ""
+                                                ? movie
+                                                : movie.Title.toLowerCase().includes(search);
+                                        })
+                                            .filter((movie) => {
+                                                //return movie.Genre.Name === 
+                                            })
+                                            .map((movie, movieId) => (
+                                                <Col md={6} lg={4} xl={3} className="mb-5 col-8" key={movieId}>
+                                                    <MovieCard movie={movie} />
+                                                </Col>
+                                            ))}
                                     </>
                                 )}
                             </>
