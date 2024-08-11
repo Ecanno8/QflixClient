@@ -1,4 +1,4 @@
-# myFlix Client
+# QFlix Client
 
 ## Overview
 
